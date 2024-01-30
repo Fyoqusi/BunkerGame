@@ -51,8 +51,8 @@ function getRandomElement(array) {
 function generateCondition() {
   const catastrophe = getRandomElement(catastrophes);
   const survivorCount = Math.floor(Math.random() * 10000000);
-  const bunkertime = Math.floor(Math.random() * 20);
-  const bunkersquare = Math.floor(Math.random() * 100);
+  const bunkertime = Math.floor(Math.random() * 24);
+  const bunkersquare = Math.floor(Math.random() * 150);
   const bunkerroom = getRandomElement(rooms);
   const bunkercondition = getRandomElement(conditions);
   const bunkerplacement = getRandomElement(places);
@@ -60,7 +60,7 @@ function generateCondition() {
   const resultElement = `
     <h2>Катастрофа:</h2>
     <p>${catastrophe}</p>
-    <p>Вижили ${survivorCount} людей.</p>
+    <p>Вижило ${survivorCount} людей.</p>
     <h2>Бункер:</h2>
     <p>Ваша мета - прожити в бункері ${bunkertime} місяців. В бункері є їжа та питна вода на половину часу перебування. Площа укриття - ${bunkersquare} квадратних метрів. ${bunkerroom}. ${bunkercondition}. ${bunkerplacement}.</p>
     `;
