@@ -110,3 +110,42 @@ span {
   box-shadow: #d6d6e7 0 3px 7px inset;
   transform: translateY(2px);
 }
+
+.language-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.lang-btn {
+  color: #000000;
+  background-color: #fff;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.lang-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.lang-btn:hover {
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.lang-btn:focus {
+  outline: none;
+  background-color: #0056b3;
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
