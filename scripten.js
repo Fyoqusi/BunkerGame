@@ -14,18 +14,6 @@ const catastrophes = [
   "Supervolcano Eruptions: Supervolcanoes activate, triggering extremely powerful eruptions. The landscape and climate change drastically. Most of the population perished instantly due to temperature fluctuations, earthquakes, and floods. Endure the most active phase in a heavily fortified bunker. You face global droughts, destroyed cities, and constant seismic activity. You can only survive by developing a highly sensitive earthquake prediction system and robotic infrastructure.",
   "Chemical Warfare: The extensive use of chemical weapons seriously disrupts the ecological balance. The microbiological composition of soil and water is altered, plants are poisoned, and nearly all animals and humans die. After emerging from the bunker, securing food will be challenging. You'll need scientists and engineers to set up shelters and farms.",
 ];
-const foods = [
-  "There is enough food and water for the entire duration of the stay in the bunker.",
-  "There is enough food and water for half of the stay in the bunker.",
-  "There are no food and water supplies in the bunker.",
-];
-
-const drugs = [
-  "The bunker has a stockpile of medical supplies.",
-  "The bunker has medication for serious illnesses.",
-  "The bunker has a small first-aid kit.",
-  "The bunker has no medical supplies.",
-];
 
 const conditions = [
   "The bunker has a greenhouse.",
@@ -50,8 +38,6 @@ function generateCondition() {
   const catastrophe = getRandomElement(catastrophes);
   const bunkertime = Math.floor(Math.random() * 24);
   const bunkersquare = Math.floor(Math.random() * 150);
-  const food = getRandomElement(foods);
-  const drug = getRandomElement(drugs);
 
   // Create a new array excluding condition1
   let condition1, condition2, condition3;
@@ -71,7 +57,7 @@ function generateCondition() {
     <h2>Catastrophe:</h2>
     <p>${catastrophe}</p>
     <h2>Bunker:</h2>
-    <p>Your goal is to live in the bunker for ${bunkertime} months. Square of the bunker is ${bunkersquare} square meters. ${food} ${drug} ${condition1} ${condition2} ${condition3}</p>
+    <p>You will have to stay in the bunker for one year, waiting for the most dangerous phase of the catastrophe to pass. The bunker has water, food, and sleeping areas. Each round, you will explore your bunker and gradually reveal Bunker cards with new information. ${condition1} ${condition2} ${condition3}</p>
     `;
   document.getElementById("result").innerHTML = resultElement;
 }
