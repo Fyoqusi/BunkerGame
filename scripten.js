@@ -57,7 +57,7 @@ function generateCondition() {
     <h2>Catastrophe:</h2>
     <p>${catastrophe}</p>
     <h2>Bunker:</h2>
-    <p>You will have to stay in the bunker for one year, waiting for the most dangerous phase of the catastrophe to pass. The bunker has water, food, and sleeping areas. Each round, you will explore your bunker and gradually reveal Bunker cards with new information. ${condition1} ${condition2} ${condition3}</p>
+    <p>You will have to stay in the bunker for one year, waiting for the most dangerous phase of the catastrophe to pass. The bunker has water, food, and sleeping areas.</p>
     `;
   document.getElementById("result").innerHTML = resultElement;
 }
